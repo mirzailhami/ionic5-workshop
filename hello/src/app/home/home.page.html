@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary">
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title color="primary" size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <!-- <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div> -->
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <h1><ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img></h1>
+    </ion-slide>
+    <ion-slide>
+      <h1><ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img></h1>
+    </ion-slide>
+    <ion-slide>
+      <h1><ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img></h1>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-button (click)="showAlert()" color="warning" expand="block">Show Alert</ion-button>
+
+  <!-- ROUTERLINK WITHOUT PARAMS -->
+  <ion-list class="ion-margin-bottom">
+    <ion-item *ngFor="let item of films" detail="true" [routerLink]="'/film/' + item.id">
+      <ion-label>{{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- ROUTERLINK WITH PARAMS -->
+  <ion-list>
+    <ion-item *ngFor="let item of films" detail="true" (click)="goto(item)">
+      <ion-label>{{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- ROUTERLINK WITH NAVIGATION EXTRAS -->
+  <ion-list>
+    <ion-item *ngFor="let item of films" detail="true" (click)="gotoExtras(item)">
+      <ion-label>{{item.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-button routerLink="/films" fill="outline" expand="block">See More</ion-button>
+  </div>
+
+</ion-content>
