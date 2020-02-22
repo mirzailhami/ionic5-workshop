@@ -18,9 +18,10 @@ export class DetailFilmPage implements OnInit {
       this.film = q;
     });
 
-    this.route.queryParams.subscribe(() => {
-      this.film = this.router.getCurrentNavigation().extras.state ? this.router.getCurrentNavigation().extras.state.params : {};
-    });
+    // this.route.queryParams.subscribe(() => {
+    //   this.film = this.router.getCurrentNavigation().extras.state ? this.router.getCurrentNavigation().extras.state.params : {};
+    //   console.log(this.film);
+    // });
   }
 
 }
