@@ -17,7 +17,7 @@ Welcome to Ionic 5 Workshop
 * angular-basic - Data binding, services, simple navigation
 * ionic-tabs - Implementing simple HTTP GET Observable request and data binding
 * ionic-list - Ionic list template
-* ionic-conference-app - A conference app built with Ionic to demonstrate Ionic
+* [ionic-conference-app](https://github.com/ionic-team/ionic-conference-app) - A conference app built with Ionic to demonstrate Ionic
 
 ## Local Preview (Browser)
 ```bash
